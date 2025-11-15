@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora Global — Legal</title>
+  <style>
+    :root {
+      --bg: #06060a;
+      --card: #0d0e14;
+      --accent: #7b5bff;
+      --accent2: #00e0ff;
+      --text: #ffffff;
+      --text-dim: #b0b0c3;
+      --blur: rgba(255,255,255,0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: rgba(10, 10, 15, 0.6);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      color: var(--text-dim);
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent2);
+    }
+
+    /* HERO */
+    .hero {
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 0 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 4rem;
+      line-height: 1.1;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeUp 1.3s ease;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      animation: fadeUp 1.8s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* GLASS SECTIONS */
+    .section {
+      width: min(900px, 90%);
+      margin: 70px auto;
+      padding: 45px;
+      background: var(--blur);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-dim);
+      margin-bottom: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 45px 0;
+      color: var(--text-dim);
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    /* BACKGROUND ORBS */
+    .orb {
+      position: fixed;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      filter: blur(220px);
+      z-index: -2;
+    }
+
+    .orb1 { background: var(--accent); top: -150px; left: -200px; opacity: 0.4; }
+    .orb2 { background: var(--accent2); bottom: -150px; right: -200px; opacity: 0.4; }
+  </style>
+<style>
+/* SCROLL ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(40px); transition: 1s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* NAVBAR SHRINK */
+nav.shrink { padding: 10px 40px; background: rgba(10,10,15,0.8); }
+
+/* HERO WAVE */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%2300e0ff" fill-opacity="0.25" d="M0,256L80,224C160,192,320,128,480,101.3C640,75,800,85,960,112C1120,139,1280,181,1360,202.7L1440,224V0H0Z"></path></svg>');
+  background-size: cover;
+  animation: waveFloat 6s ease-in-out infinite alternate;
+}
+@keyframes waveFloat { from{ transform: translateY(0);} to{ transform: translateY(18px);} }
+</style>
+</head>
+<body>
+
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <nav>
+    <h1>Nexora Global</h1>
+    <div>
+      <a href="#tos">Terms</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h2>Legal & Privacy Center</h2>
+    <p>All official legal documentation for Nexora Global, the bot, and all related services.</p>
+  </section>
+
+  <section id="tos" class="section">
+    <h2>Terms of Service</h2>
+    <p>Nexora Global provides bot development, automated systems, websites, and related tools. By using our bot or services, you agree to comply with Discord’s Terms of Service and to refrain from harmful or abusive activity.</p>
+    <p>Access may be limited or revoked if suspicious behavior is detected.</p>
+  </section>
+
+  <section id="privacy" class="section">
+    <h2>Data We Store</h2>
+    <p>We only store operational, non-personal data such as sequential order IDs. No sensitive or personal-identifying information is collected beyond default Discord user metadata.</p>
+    <p>We do not sell, share, or distribute data to any third party. Ever.</p>
+  </section>
+
+  <section class="section">
+    <h2>Children's Privacy</h2>
+    <p>We do not knowingly store any data belonging to users under the age of 13. Any data mistakenly collected will be deleted upon request.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Discord: <strong>.exx3l</strong></p>
+  </section>
+
+  <footer>© 2025 Nexora Global — All Rights Reserved</footer>
+
+<script>
+// SCROLL REVEAL
+const reveals = document.querySelectorAll('.section');
+function revealOnScroll() {
+  reveals.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 120) sec.classList.add('active');
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// NAV SHRINK
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) nav.classList.add('shrink');
+  else nav.classList.remove('shrink');
+});
+</script>
+</body>
+</html>
